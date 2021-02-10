@@ -439,14 +439,6 @@ function getTOKEN(timeout = 0) {
             }
             $.post(url, async (err, resp, data) => {
                 try {
-                 
-                    console.log("process.env.XP_CASH数据是 : \n\n")
-                    console.log(secrets.XP_CASH)
-                    console.log("process.env.XP_refreshTOKEN数据是 : \n\n")
-                    console.log(secrets.XP_refreshTOKEN)
-                    console.log("process.env.XP_IBOXPAYHEADER数据是 : \n\n")
-                    console.log(secrets.XP_IBOXPAYHEADER)
-
                     if (logs) $.log(`${O}, TOKEN获取🚩: ${data}`);
                     $.getTOKEN = JSON.parse(data);
                     if ($.getTOKEN.resultCode == 1) {
@@ -504,6 +496,11 @@ function refreshtoken(timeout = 0) {
                     if ($.refreshtoken.resultCode == 1) {
                         TOKEN = $.refreshtoken.data.accessToken
                         console.log('更新TOKEN成功:' + TOKEN + '\n');
+                     
+                        console.log('process.env.XP_CASH数据是 : ' +process.env.XP_CASH  + '\n');
+                        console.log('process.env.XP_refreshTOKEN数据是 : '+process.env.XP_refreshTOKEN+ '\n');
+                        console.log('process.env.XP_IBOXPAYHEADER数据是 : '+process.env.XP_iboxpayHEADER+ '\n');
+                     
                     }
                 } catch (e) {
                     $.logErr(e, resp);
