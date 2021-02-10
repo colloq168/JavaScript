@@ -441,11 +441,11 @@ function getTOKEN(timeout = 0) {
                 try {
                  
                     console.log("process.env.XP_CASH数据是 : \n\n")
-                    console.log(XP_CASH)
+                    console.log(secrets.XP_CASH)
                     console.log("process.env.XP_refreshTOKEN数据是 : \n\n")
-                    console.log(XP_refreshTOKEN)
+                    console.log(secrets.XP_refreshTOKEN)
                     console.log("process.env.XP_IBOXPAYHEADER数据是 : \n\n")
-                    console.log(XP_IBOXPAYHEADER)
+                    console.log(secrets.XP_IBOXPAYHEADER)
 
                     if (logs) $.log(`${O}, TOKEN获取🚩: ${data}`);
                     $.getTOKEN = JSON.parse(data);
