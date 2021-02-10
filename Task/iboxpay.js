@@ -118,6 +118,17 @@ let livecs = 0,
     HBY = 0,
     liveIdcd = 0;
 RT = 30000;
+
+
+
+     
+console.log("process.env.XP_CASH数据是 : \n\n")
+console.log(process.env.XP_CASH)
+console.log("process.env.XP_refreshTOKEN数据是 : \n\n")
+console.log(process.env.XP_refreshTOKEN)
+console.log("process.env.XP_IBOXPAYHEADER数据是 : \n\n")
+console.log(process.env.XP_IBOXPAYHEADER)
+
 const refreshtokenArr = [];
 let refreshtokenVal = ``;
 let middlerefreshTOKEN = [];
