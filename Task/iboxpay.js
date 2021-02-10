@@ -497,8 +497,8 @@ function refreshtoken(timeout = 0) {
                         TOKEN = $.refreshtoken.data.accessToken
                         console.log('更新TOKEN成功:' + TOKEN + '\n');
                      
-                        console.log('process.env.XP_CASH数据是 : ' +XP_CASH  + '\n');
-                        console.log('process.env.XP_refreshTOKEN数据是 : '+XP_refreshTOKEN+ '\n');
+                        console.log('process.env.XP_CASH数据是 : ' +CASH  + '\n');
+                        console.log('process.env.XP_refreshTOKEN数据是 : '+middlerefreshTOKEN+ '\n');
                         console.log('process.env.XP_IBOXPAYHEADER数据是 : '+XP_iboxpayHEADER+ '\n');
                      
                     }
