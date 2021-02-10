@@ -329,6 +329,13 @@ async function all() {
         O = (`${$.name + (i + 1)}🔔`);
         await console.log(`-------------------------\n\n🔔开始运行【${$.name+(i+1)}】`)
 
+        console.log("process.env.XP_CASH数据是 : \n\n")
+        console.log(process.env.XP_CASH)
+        console.log("process.env.XP_refreshTOKEN数据是 : \n\n")
+        console.log(process.env.XP_refreshTOKEN)
+        console.log("process.env.XP_IBOXPAYHEADER数据是 : \n\n")
+        console.log(process.env.XP_IBOXPAYHEADER)
+
         await refreshtoken(); //更新TOKEN
 
         if (LIVE == 3 && (nowTimes.getHours() === 12 || nowTimes.getHours() === 19 || nowTimes.getHours() === 21) && (nowTimes.getMinutes() >= 0 && nowTimes.getMinutes() <= 10)) {
