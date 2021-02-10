@@ -191,16 +191,6 @@ if (!COOKIE.refreshtokenVal) {
     } else Length = refreshtokenArr.length
 }
 
-
-     
-console.log("process.env.XP_CASH数据是 : \n\n")
-console.log(process.env.XP_CASH)
-console.log("process.env.XP_refreshTOKEN数据是 : \n\n")
-console.log(process.env.XP_refreshTOKEN)
-console.log("process.env.XP_IBOXPAYHEADER数据是 : \n\n")
-console.log(process.env.XP_IBOXPAYHEADER)
-
-
 function GetCookie() {
     if ($request && $request.url.indexOf("nf-user-auth-web") >= 0) {
         const refreshtokenVal = JSON.parse($response.body).data.refreshToken
