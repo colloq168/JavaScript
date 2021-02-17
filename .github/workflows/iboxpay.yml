@@ -40,15 +40,6 @@ jobs:
             XP_refreshTOKEN: ${{ secrets.XP_refreshTOKEN }}
             XP_CASH: ${{ secrets.XP_CASH }}
             XP_live: ${{ secrets.XP_live }}
-        
-      - name: '运行 【笑谱二】'
-        if: env.XP_refreshTOKEN2
-        run: |
-          cd ~/JavaScript
-          node Task/iboxpay.js
-        env:
-            XP_refreshTOKEN: ${{ secrets.XP_refreshTOKEN2 }}
-            XP_CASH: ${{ secrets.XP_CASH }}
-            XP_live: ${{ secrets.XP_live }}
+
 
     
