@@ -15,6 +15,7 @@ jobs:
     if: github.event.repository.owner.id == github.event.sender.id
     env:
         XP_refreshTOKEN: ${{ secrets.XP_refreshTOKEN }}
+        XP_refreshTOKEN2: ${{ secrets.XP_refreshTOKEN2 }}
         XP_CASH: ${{ secrets.XP_CASH }}
         XP_live: ${{ secrets.XP_live }}
     steps:
@@ -30,19 +31,24 @@ jobs:
         run: |
           cd ~/JavaScript
           npm install
-      - name: '运行 【笑谱】'
+      - name: '运行 【笑谱一】'
         if: env.XP_refreshTOKEN
         run: |
           cd ~/JavaScript
           node Task/iboxpay.js
         env:
-          
-          PUSH_KEY: ${{ secrets.PUSH_KEY }}
-          BARK_PUSH: ${{ secrets.BARK_PUSH }}
-          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
-          TG_USER_ID: ${{ secrets.TG_USER_ID }}
-          BARK_SOUND: ${{ secrets.BARK_SOUND }}
-          DD_BOT_TOKEN: ${{ secrets.DD_BOT_TOKEN }}
-          DD_BOT_SECRET: ${{ secrets.DD_BOT_SECRET }}
+            XP_refreshTOKEN: ${{ secrets.XP_refreshTOKEN }}
+            XP_CASH: ${{ secrets.XP_CASH }}
+            XP_live: ${{ secrets.XP_live }}
+        
+      - name: '运行 【笑谱二】'
+        if: env.XP_refreshTOKEN2
+        run: |
+          cd ~/JavaScript
+          node Task/iboxpay.js
+        env:
+            XP_refreshTOKEN: ${{ secrets.XP_refreshTOKEN2 }}
+            XP_CASH: ${{ secrets.XP_CASH }}
+            XP_live: ${{ secrets.XP_live }}
 
     
